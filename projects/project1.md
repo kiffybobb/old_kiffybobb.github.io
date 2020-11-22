@@ -3,7 +3,7 @@ layout: project
 title: Netcheck project
 description: "Utilising a Raspberry Pi and speedtest-cli to check internet transfer speeds"
 "header-img": "img/home-bg.jpg"
-category: Netcheck
+category: project1
 published: true
 ---
 
