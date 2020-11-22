@@ -8,6 +8,7 @@ published: true
 ---
 
 
+
 Our home internet connection started to seem a bit shakey recently, and with the COVID-19 pandemic sweeping Australia, I was stuck inside needing internet and not getting the results from my NBN connectivity that I would have preferred. Enter the [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/). 
 
 A Raspberry Pi, for those that may not know, is just a tiny, credit-card sized computer. I purchased one, and a bit of kit to go with it, and got on my way. The advantage of using such a device was that I could leave it running a script in the background that could collect data for me, allowing me to come and go as I pleased, and viewing the data later. 
@@ -187,13 +188,12 @@ So every half hour the raspberry runs the ```netcheck.py``` script. Laughing.
 I previously had a copy of Tableau, but it expired, so I tried my luck with Tableau Public. 
 I came up with the following, which you can access and play with [here](https://public.tableau.com/profile/rob8334#!/vizhome/netcheck2_1/netcheck2_1).
 
+![tableau_screenshot.jpg]({{site.baseurl}}/img/tableau_screenshot.jpg)
 
+The people at my ISP told me the minimum acceptable download speed was 9 Mbps. You can see from the Tableau dashboard that I am only getting speeds beyond this about 50% of the time, given **1,811** observations, or approximately 37 days. 
 
+NOT GREAT. 
 
-
-
-
-
-
+Now I just need to get the ISP to do something about it, or perhaps stop using the microwave whilst trying to stream Netflix...
 
 
