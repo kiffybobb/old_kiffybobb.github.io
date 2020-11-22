@@ -165,6 +165,30 @@ if __name__ == "__main__":
 
 All the above script is basically doing is making sure there is an internet connection, then running speedtest-cli and copying information from the shell output. Then I have to trawl through the output and save the correct little chunks of information I want into some variables I have created. Then I write those little chunks of information (like download speed, upload speed, distance to sever etc.) to a CSV file for later scrutiny. 
 
+## Running the script automatically
+To run the script in the background automatically, I needed to create a **cronjob**, which is an automated task in a UNIX environment (the operating system used by the raspberry pi). From the command line I can run:
+```bash
+crontab -e
+```
+This allows me to edit the crontable(?). Then it is just a matter of adding the following:
+
+```bash
+8,38 * * * * /usr/bin/python3 /home/pi/Python/netcheck/netcheck.py > /home/pi/logs/cronlog.log 2>&1
+```
+This tells the pi to:
+- run everything at any minute ending in *8* or *38*. 
+- Use the program python3 (the python installation) from the specified path
+- Run the script at the specified path (netcheck.py)
+- Save a log to the specified file and path (cronlog.log)
+
+So every half hour the raspberry runs the ```netcheck.py``` script. Laughing. 
+
+## Visualising the data with Tableau Public
+I previously had a copy of Tableau, but it expired, so I tried my luck with Tableau Public. 
+I came up with the following, which you can access and play with [here](https://public.tableau.com/profile/rob8334#!/vizhome/netcheck2_1/netcheck2_1).
+
+
+
 
 
 
